@@ -1,0 +1,393 @@
+<!doctype html>
+<html class="no-js" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Estamos em Manuten&ccedil;&atilde;o | Portal do Cliente - Ello Mercantil S/A</title>
+    <meta name="author" content="Ello Mercantil">
+    <meta name="description" content="Portal do Cliente da Ello Mercantil S/A temporariamente em manuten&ccedil;&atilde;o para melhorias.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#0b0b0e">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        :root {
+            --portal-gold: #cdb27b;
+            --portal-gold-hover: #dfc796;
+            --portal-bg-dark: #0b0b0e;
+            --portal-card-bg: rgba(18, 18, 24, 0.88);
+            --portal-text-muted: #a4a5b2;
+            --portal-border-gold: rgba(205, 178, 123, 0.22);
+        }
+
+        body.portal-body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: var(--portal-bg-dark);
+            color: #ffffff;
+            font-family: var(--body-font, 'Inter', sans-serif);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background-image:
+                radial-gradient(ellipse 650px 320px at 50% 0%, rgba(205, 178, 123, 0.08) 0%, transparent 70%),
+                radial-gradient(circle at 50% 30%, #16161f 0%, #0c0c10 65%, #070709 100%);
+            background-attachment: fixed;
+        }
+
+        /* Abstract geometric backdrop shapes */
+        .portal-bg-shape {
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+            border-radius: 40px;
+            filter: blur(45px);
+            opacity: 0.45;
+        }
+
+        .portal-bg-shape-1 {
+            width: 480px;
+            height: 380px;
+            top: -120px;
+            right: -100px;
+            background: linear-gradient(135deg, rgba(27, 27, 34, 0.8), rgba(205, 178, 123, 0.06));
+            transform: rotate(-18deg);
+        }
+
+        .portal-bg-shape-2 {
+            width: 440px;
+            height: 340px;
+            bottom: -100px;
+            left: -80px;
+            background: linear-gradient(135deg, rgba(27, 27, 34, 0.9), rgba(16, 16, 22, 0.7));
+            transform: rotate(14deg);
+        }
+
+        /* Maintenance wrapper & card */
+        .portal-wrapper {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 620px;
+            padding: 24px 20px;
+            margin: auto;
+        }
+
+        .portal-card {
+            background: var(--portal-card-bg);
+            border: 1px solid var(--portal-border-gold);
+            border-radius: 24px;
+            padding: 40px 42px 30px 42px;
+            text-align: center;
+            box-shadow: 
+                0 30px 80px rgba(0, 0, 0, 0.7),
+                0 0 50px rgba(205, 178, 123, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            position: relative;
+        }
+
+        /* Top subtle gold highlight on card border */
+        .portal-card::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--portal-gold), transparent);
+            border-radius: 2px;
+            pointer-events: none;
+        }
+
+        /* Logo */
+        .portal-logo-link {
+            display: inline-block;
+            margin-bottom: 22px;
+            transition: opacity 0.3s ease;
+        }
+
+        .portal-logo-link:hover {
+            opacity: 0.88;
+        }
+
+        .portal-logo {
+            max-width: 155px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.5));
+        }
+
+        /* Maintenance Icon Badge */
+        .portal-icon-badge {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            margin: 0 auto 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle, rgba(205, 178, 123, 0.16) 0%, rgba(205, 178, 123, 0.04) 100%);
+            border: 1px solid rgba(205, 178, 123, 0.36);
+            box-shadow: 0 0 24px rgba(205, 178, 123, 0.14);
+            color: var(--portal-gold);
+        }
+
+        .portal-icon-badge svg {
+            width: 32px;
+            height: 32px;
+            stroke: var(--portal-gold);
+        }
+
+        /* Title */
+        .portal-title {
+            font-family: var(--title-font, 'DM Sans', sans-serif);
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.25;
+            color: #ffffff;
+            margin: 0 0 12px 0;
+            letter-spacing: -0.02em;
+        }
+
+        /* Subtle gold divider line */
+        .portal-accent-line {
+            width: 44px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--portal-gold), transparent);
+            margin: 0 auto 18px;
+            border-radius: 2px;
+        }
+
+        /* Text copy */
+        .portal-content {
+            margin-bottom: 26px;
+        }
+
+        .portal-content p {
+            font-family: var(--body-font, 'Inter', sans-serif);
+            font-size: 15.5px;
+            line-height: 1.6;
+            color: var(--portal-text-muted);
+            margin: 0 0 10px 0;
+        }
+
+        .portal-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .portal-content p.portal-lead {
+            color: #d2d3dc;
+            font-size: 16.5px;
+            font-weight: 400;
+        }
+
+        .portal-content p.portal-note {
+            color: #ececee;
+            font-weight: 500;
+        }
+
+        /* Action button */
+        .portal-action {
+            display: flex;
+            justify-content: center;
+        }
+
+        .portal-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: var(--portal-gold);
+            color: #0b0b0e !important;
+            font-family: var(--body-font, 'Inter', sans-serif);
+            font-size: 14.5px;
+            font-weight: 600;
+            padding: 13px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            border: 1px solid rgba(205, 178, 123, 0.7);
+            box-shadow: 0 8px 24px rgba(205, 178, 123, 0.28);
+            transition: all 0.3s ease;
+        }
+
+        .portal-btn:hover {
+            background-color: var(--portal-gold-hover);
+            color: #000000 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 28px rgba(205, 178, 123, 0.38);
+        }
+
+        .portal-btn:active {
+            transform: translateY(0);
+        }
+
+        .portal-btn-arrow {
+            width: 17px;
+            height: 17px;
+            transition: transform 0.3s ease;
+        }
+
+        .portal-btn:hover .portal-btn-arrow {
+            transform: translateX(-4px);
+        }
+
+        /* Institutional footer note */
+        .portal-footer {
+            margin-top: 24px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .portal-footer p {
+            margin: 0;
+            font-size: 12.5px;
+            color: #6a6b77;
+            font-family: var(--body-font, 'Inter', sans-serif);
+            letter-spacing: 0.01em;
+        }
+
+        /* Responsive styling */
+        @media (max-width: 576px) {
+            .portal-wrapper {
+                padding: 18px 14px;
+            }
+
+            .portal-card {
+                padding: 30px 20px 22px 20px;
+                border-radius: 20px;
+            }
+
+            .portal-logo {
+                max-width: 135px;
+                margin-bottom: 18px;
+            }
+
+            .portal-icon-badge {
+                width: 56px;
+                height: 56px;
+                margin-bottom: 15px;
+            }
+
+            .portal-icon-badge svg {
+                width: 28px;
+                height: 28px;
+            }
+
+            .portal-title {
+                font-size: 23px;
+                margin-bottom: 10px;
+            }
+
+            .portal-accent-line {
+                margin-bottom: 14px;
+            }
+
+            .portal-content {
+                margin-bottom: 20px;
+            }
+
+            .portal-content p.portal-lead {
+                font-size: 14.5px;
+            }
+
+            .portal-content p {
+                font-size: 13.5px;
+                margin-bottom: 8px;
+            }
+
+            .portal-btn {
+                width: 100%;
+                padding: 13px 22px;
+            }
+
+            .portal-footer {
+                margin-top: 18px;
+                padding-top: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body class="portal-body">
+    <!-- Background abstract geometric elements -->
+    <div class="portal-bg-shape portal-bg-shape-1" aria-hidden="true"></div>
+    <div class="portal-bg-shape portal-bg-shape-2" aria-hidden="true"></div>
+
+    <!-- Main Container -->
+    <main class="portal-wrapper" role="main">
+        <div class="portal-card">
+            <!-- Brand Logo -->
+            <a href="index.html" class="portal-logo-link" aria-label="Ir para a página inicial da Ello Mercantil">
+                <img src="assets/img/logo-png2.png" alt="Ello Mercantil S/A" class="portal-logo">
+            </a>
+
+            <!-- Maintenance Icon SVG -->
+            <div class="portal-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                </svg>
+            </div>
+
+            <!-- Content Area -->
+            <h1 class="portal-title">Estamos em manuten&ccedil;&atilde;o</h1>
+            <div class="portal-accent-line" aria-hidden="true"></div>
+
+            <div class="portal-content">
+                <p class="portal-lead">Nosso Portal do Cliente est&aacute; temporariamente indispon&iacute;vel para melhorias.</p>
+                <p>Em breve&comma; retomaremos nossas atividades normalmente.</p>
+                <p class="portal-note">Agradecemos sua compreens&atilde;o.</p>
+            </div>
+
+            <!-- Action Button -->
+            <div class="portal-action">
+                <a href="index.html" class="portal-btn">
+                    <svg class="portal-btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                        <path d="M19 12H5M12 19l-7-7 7-7"></path>
+                    </svg>
+                    <span>Voltar ao in&iacute;cio</span>
+                </a>
+            </div>
+
+            <!-- Institutional Footer -->
+            <footer class="portal-footer">
+                <p>&copy; 2026 Ello Mercantil S/A. Todos os direitos reservados.</p>
+            </footer>
+        </div>
+    </main>
+</body>
+
+</html>

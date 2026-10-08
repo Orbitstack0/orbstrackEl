@@ -1,0 +1,270 @@
+/* Counter 1 ---------------------------------- */
+.counter-card {
+    text-align: center;
+    padding: 37.6px 0;
+    .box-number {
+        margin-top: -0.22em;
+        margin-bottom: -0.1em;
+    }
+    .box-text {
+        max-width: 186px;
+        font-size: 18px;
+        font-weight: 500;
+        display: inline-block;
+        @include sm {
+            font-size: 16px;
+            max-width: 170px;
+        }
+    }
+}
+.counter-wrap1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $title-color;
+    padding: 0 80px;
+    border-radius: 0 0 24px 24px;
+    border-bottom: 1px solid $theme-color;
+    .divider {
+        width: 1px;
+        height: 180px;
+        background: $body-color;
+        &:last-of-type {
+            display: none;
+        }
+        @include md {
+            display: none;
+        }
+    }
+    @include lg {
+        padding: 0 40px;
+    }
+    @include md {
+        flex-wrap: wrap;
+        gap: 40px 0;
+        padding: 60px;
+        .counter-card {
+            flex: 50%;
+            padding: 0;
+        }
+    }
+    @include sm {
+        padding: 40px;
+    }
+    @include xs {
+        padding: 40px 20px;
+    }
+    @include vxs {
+        .counter-card {
+            flex: 100%;
+        }
+    }
+}
+
+/* Counter 2 ---------------------------------- */
+.counter-area-2 {
+    background: $black-color2;
+    margin-right: 120px;
+    @include xxl {
+        margin-right: 0;
+    }
+}
+.counter-card2 {
+    text-align: center;
+    padding: 37.6px 0;
+    .box-number {
+        margin-top: -0.22em;
+        margin-bottom: -0.1em;
+        letter-spacing: 0.02em;
+    }
+    .box-text {
+        font-size: 16px;
+        font-weight: 400;
+        display: inline-block;
+        @include sm {
+            font-size: 16px;
+        }
+    }
+}
+.counter-wrap2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .divider {
+        width: 1px;
+        height: 220px;
+        background: $white-color;
+        opacity: 0.1;
+        &:last-of-type {
+            display: none;
+        }
+        @include md {
+            display: none;
+        }
+    }
+    .client-group-wrap {
+        .client-group-details {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+            margin-top: 10px;
+            justify-content: center;
+            @include lg {
+                margin-top: 20px;
+                gap: 15px;
+            }
+            .box_number {
+                font-size: 56px;
+                font-weight: 700;
+                color: $white-color;
+                margin-bottom: 0;
+                @include lg {
+                    font-size: 40px;
+                }
+            }
+            .star-rating {
+                &:before {
+                    color: $theme-color2;
+                }
+            }
+            .box_text {
+                margin-bottom: -0.3em;
+                color: $white-color;
+                font-size: 18px;
+                font-weight: 600;
+                font-family: $title-font;
+                margin-top: 8px;
+                @include lg {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    @include md {
+        flex-wrap: wrap;
+        gap: 40px 0;
+        padding: 60px 0;
+        .counter-card2 {
+            flex: 50%;
+            padding: 0;
+        }
+    }
+    @include xs {
+        padding: 40px 0px;
+    }
+    @include vxs {
+        .counter-card2 {
+            flex: 100%;
+        }
+    }
+}
+
+/* Counter 3 ---------------------------------- */
+.counter-card3 {
+    background: $black-color2;
+    padding: 65px 20px;
+    text-align: center;
+    .box-number {
+        font-size: 40px;
+        font-weight: 600;
+        margin-top: -0.25em;
+        margin-bottom: 0;
+    }
+    .box-text {
+        font-size: 18px;
+    }
+    @include ml {
+        .box-number {
+            font-size: 36px;
+        }
+        .box-text {
+            font-size: 16px;
+        }
+    }
+    @include sm {
+        .box-number {
+            font-size: 28px;
+        }
+    }
+    @include xs {
+        padding: 40px 20px;
+    }
+}
+/* Counter 4 ---------------------------------- */
+.counter-card4 {
+    background: $black-color2;
+    padding: 48px 20px;
+    text-align: center;
+    .box-icon {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: $theme-color;
+        margin-bottom: 18px;
+        img {
+            transition: 0.4s;
+        }
+    }
+    .box-number {
+        font-size: 56px;
+        font-weight: 700;
+        color: $white-color;
+        letter-spacing: 0.02em;
+        margin-bottom: -0.2em;
+    }
+    .box-text {
+        font-size: 24px;
+        color: $light-color;
+    }
+    &:hover {
+        .box-icon {
+            img {
+                transform: rotateY(180deg);
+            }
+        }
+    }
+    @include ml {
+        .box-number {
+            font-size: 36px;
+        }
+        .box-text {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    }
+    @include sm {
+        .box-number {
+            font-size: 30px;
+        }
+    }
+}
+
+/* Counter 5 ---------------------------------- */
+.counter-card5 {
+    border: 1px solid $light-color;
+    border-radius: 8px;
+    text-align: center;
+    padding: 55px 0;
+    .box-title {
+        font-size: 56px;
+        font-weight: 700;
+        margin-bottom: -0.2em;
+    }
+    .box-text {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    @include xl {
+        padding: 40px 0;
+        .box-title {
+            font-size: 40px;
+        }
+        .box-text {
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,683 @@
+<!doctype html>
+<html class="no-js" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fale Conosco | Contato - Ello Mercantil S/A</title>
+    <meta name="author" content="Ello Mercantil">
+    <meta name="description" content="Entre em contato com a equipe de especialistas da Ello Mercantil S/A. D&uacute;vidas, atendimento comercial, simula&ccedil;&otilde;es e suporte.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* Card de Contatos sobre o Mapa */
+        .widget-contact-wrap.bg-black2 {
+            background-color: #121316 !important;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        .widget-contact-wrap .widget-logo img {
+            max-width: 175px;
+            height: auto;
+            display: block;
+        }
+
+        .widget-contact-wrap .widget_title {
+            color: #ffffff;
+            font-family: var(--title-font, 'DM Sans', sans-serif);
+            border-bottom: 1px solid rgba(205, 178, 123, 0.25);
+            padding-bottom: 14px;
+            margin-bottom: 24px;
+        }
+
+        .widget-contact-list li .box-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--theme-color, #cdb27b);
+            color: #ffffff;
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+        }
+
+        .widget-contact-list li .box-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke: #ffffff;
+        }
+
+        .widget-contact-list li .box-title {
+            color: #ffffff;
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .widget-contact-list li .box-text {
+            color: #b5b5c2;
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .widget-contact-list li .box-text a {
+            color: #b5b5c2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .widget-contact-list li .box-text a:hover {
+            color: var(--theme-color, #cdb27b);
+        }
+
+        /* Responsividade para a seção de mapa */
+        @media (max-width: 1199px) {
+            .contact-page-v1 {
+                display: flex;
+                flex-direction: column-reverse;
+                padding-top: 50px !important;
+                padding-bottom: 0 !important;
+            }
+
+            .contact-page-v1 .contact-map {
+                position: relative;
+                inset: auto;
+                height: 380px;
+                width: 100%;
+                margin-top: 30px;
+            }
+
+            .contact-page-v1 .contact-map iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        /* Ícone do select no formulário */
+        .form-select-icon {
+            position: absolute;
+            right: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            width: 16px;
+            height: 16px;
+            color: var(--body-color, #57585F);
+        }
+
+        /* Mensagens de feedback do formulário */
+        .form-messages {
+            font-size: 14.5px;
+            line-height: 1.6;
+        }
+
+        .form-messages.text-warning {
+            color: #856404 !important;
+            background-color: #fff3cd;
+            border: 1px solid #ffeeba;
+            border-radius: 8px;
+            padding: 14px 18px;
+        }
+
+        .form-messages strong {
+            color: #000000;
+        }
+
+        /* Separador do breadcrumb: seta para a direita (›) sem fontes externas */
+        .breadcumb-menu li:after {
+            content: "›" !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1;
+            margin-left: 9px;
+            margin-right: 5px;
+            color: rgba(255, 255, 255, 0.8) !important;
+            display: inline-block;
+            vertical-align: 1px;
+        }
+    </style>
+</head>
+
+<!-- Botão Flutuante do WhatsApp -->
+<a href="https://wa.link/aw2szq" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="position:fixed;width:60px;height:60px;bottom:125px;right:30px;background-color:#25D366;color:#ffffff;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(0,0,0,0.2);z-index:1000;text-decoration:none;"> 
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" style="display:block;">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+</a>
+
+<body>
+
+    <!--==============================
+    Mobile Menu
+  ============================== -->
+    <div class="th-menu-wrapper" id="mobileMenu">
+        <div class="th-menu-area text-center">
+            <button class="th-menu-toggle" type="button" aria-label="Fechar menu">
+                <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true" focusable="false">
+                    <path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                </svg>
+            </button>
+            <div class="mobile-logo">
+                <a href="index.html"><img src="assets/img/logo-png2.png" alt="Ello Mercantil"></a>
+            </div>
+            <div class="th-mobile-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="empresa.html">A Ello</a></li>
+                    <li><a href="consorcios.html">Cons&oacute;rcios</a></li> 
+                    <li class="active"><a href="contato.html">Fale Conosco</a></li> 
+                    <li><a href="simulador.html">Simule</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+	Header Area
+==============================-->
+    <header class="th-header header-layout1">
+        <div class="header-top">
+            <div class="container">
+                <div class="row justify-content-center justify-content-lg-between align-items-center gy-2">
+                    <div class="col-auto d-none d-lg-block">
+                        <div class="header-links">
+                            <ul class="header-left-wrap">
+                                <li>
+                                    <svg class="header-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.28-1.28a2 2 0 0 1 2.11-.45c.9.33 1.84.56 2.8.69A2 2 0 0 1 22 16.92z"></path>
+                                    </svg><a href="tel:5123141828">51 2314-1828</a>
+                                </li>
+                                <li>
+                                    <svg class="header-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8A8.5 8.5 0 0 1 12.5 20a8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7A8.38 8.38 0 0 1 4 11.5a8.5 8.5 0 1 1 17 0z"></path>
+                                        <path d="M8.4 8.2c.4 3.5 2 5.1 5.4 5.5"></path>
+                                    </svg><a href="https://wa.link/aw2szq" target="_blank" rel="noopener noreferrer">51 99719-1616</a>
+                                </li>
+                                <li>
+                                    <svg class="header-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M4 14v-2a8 8 0 0 1 16 0v2"></path>
+                                        <path d="M18 19c0 1.1-.9 2-2 2h-3"></path>
+                                        <rect x="3" y="13" width="4" height="6" rx="2"></rect>
+                                        <rect x="17" y="13" width="4" height="6" rx="2"></rect>
+                                    </svg><a href="tel:08001551010">08001551010 (Ouvidoria)</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-auto">
+                        <div class="header-links">
+                            <ul class="header-right-wrap">
+                                <li>
+                                    <svg class="header-link-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg><a href="portal.html">Portal do Cliente</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sticky-wrapper">
+            <!-- Main Menu Area -->
+            <div class="menu-area">
+                <div class="container-fluid p-0">
+                    <div class="row align-items-center justify-content-between">
+                        <div class="col-auto">
+                            <div class="header-logo">
+                                <a href="index.html">
+                                    <img src="assets/img/logo-png2.png" alt="Ello Mercantil">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-auto ms-lg-auto">
+                            <nav class="main-menu d-none d-lg-inline-block">
+                                <ul>
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="empresa.html">A Ello</a></li>
+                                    <li><a href="consorcios.html">Cons&oacute;rcios</a></li>
+                                    <li class="active"><a href="contato.html">Fale Conosco</a></li>
+                                    <li><a href="simulador.html">Simule</a></li>
+                                </ul>
+                            </nav>
+                            <button class="th-menu-toggle header-menu-toggle d-inline-flex d-lg-none" type="button" aria-label="Abrir menu" aria-controls="mobileMenu">
+                                <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                                    <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!--==============================
+    Breadcumb / Banner
+============================== -->
+    <div class="breadcumb-wrapper " data-bg-src="assets/img/bg/breadcumb-bg.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-xxl-6">
+                    <div class="breadcumb-content">
+                        <ul class="breadcumb-menu">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Contato</li>
+                        </ul>
+                        <h1 class="breadcumb-title">Fale Conosco</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+    Map Area & Contact Info Box
+==============================-->
+    <div class="space overflow-hidden contact-page-v1">
+        <div class="contact-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3455.1779282554076!2d-51.20260422549925!3d-30.00304697494447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951979ed360b7997%3A0x1ccf79cdf1119116!2sAv.%20Farrapos%2C%203392%20-%20Floresta%2C%20Porto%20Alegre%20-%20RS%2C%2090220-002!5e0!3m2!1spt-BR!2sbr!4v1776798540009!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localização Ello Mercantil no Google Maps"></iframe>
+        </div>
+        <div class="container">
+            <div class="row justify-content-end">
+                <div class="col-xl-4">
+                    <div class="widget-contact-wrap bg-black2">
+                        <div class="widget-logo mb-4">
+                            <img src="assets/img/logo-png2.png" alt="Ello Mercantil S/A">
+                        </div>
+                        <h4 class="widget_title">Contatos:</h4>
+                        <ul class="widget-contact-list">
+                            <li>
+                                <div class="box-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="box-content">
+                                    <h4 class="box-title">Endere&ccedil;o</h4>
+                                    <p class="box-text">
+                                        <a href="https://maps.google.com/?q=Av.+Farrapos,+3392+-+Porto+Alegre/RS+-+Cep:+90220-002" target="_blank" rel="noopener noreferrer">
+                                            Av. Farrapos, 3392 - Porto Alegre/RS - Cep: 90220-002
+                                        </a>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.28-1.28a2 2 0 0 1 2.11-.45c.9.33 1.84.56 2.8.69A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div class="box-content">
+                                    <h4 class="box-title">Telefones</h4>
+                                    <p class="box-text mb-1"><a href="tel:1142103201">11 4210-3201</a></p>
+                                    <p class="box-text"><a href="https://wa.link/aw2szq" target="_blank" rel="noopener noreferrer">51 99719-1616</a></p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="box-icon" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="box-content">
+                                    <h4 class="box-title">E-mail</h4>
+                                    <p class="box-text"><a href="mailto:contato@consorcioello.com.br">contato@consorcioello.com.br</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+    Contact Area / Form
+==============================-->
+    <div class="space overflow-hidden contact-area-1 position-relative z-index-common" id="contact-sec">
+        <div class="container">
+            <div class="row gy-40">
+                <div class="col-xl-12">
+                    <div class="contact-page-contact-form-wrap">
+                        <div class="contact-form-wrap">
+                            <div class="title-area">
+                                <span class="sub-title">FALE COM O CONS&Oacute;RCIO ELLO</span>
+                                <h2 class="sec-title">D&uacute;vidas ou mais informa&ccedil;&otilde;es?</h2>
+                            </div>
+                            <div class="contact-form-v1">
+                                <form id="contatoForm" action="#" method="POST">
+                                    <!-- Configurações de envio Formspree -->
+                                    <input type="hidden" name="origem" value="Fale Conosco">
+                                    <input type="hidden" name="_subject" value="[Site Ello] Mensagem de Contato - Fale Conosco">
+                                    <input type="hidden" name="destinatario" value="contato@consorcioello.com.br">
+                                    <!-- Proteção Antispam Honeypot -->
+                                    <input type="text" name="_gotcha" style="display:none !important;" tabindex="-1" autocomplete="off">
+                                    <div class="row">
+                                        <div class="form-group style2 col-md-6">
+                                            <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome*" required>
+                                        </div>
+                                        <div class="form-group style2 col-md-6">
+                                            <input type="tel" class="form-control" name="telefone" id="telefone" placeholder="Telefone*" required>
+                                        </div>
+                                        <div class="form-group style2 col-12">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="E-mail*" required>
+                                        </div>
+                                        <div class="form-group style2 col-12">
+                                            <input type="text" class="form-control" name="valor" id="valor" placeholder="Valor do Cr&eacute;dito*" required>
+                                        </div>
+                                        <div class="form-group style2 col-12 position-relative">
+                                            <select name="assunto" id="assunto" class="form-select" required>
+                                                <option value="" disabled selected hidden>Servi&ccedil;os</option>
+                                                <option value="Consorcio">Cons&oacute;rcio</option>
+                                                <option value="Rural-Investimento">Rural / Investimento</option>
+                                                <option value="Capital">Capital de Giro</option>
+                                                <option value="Outros">Outros</option>
+                                            </select>
+                                            <svg class="form-select-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                                                <polyline points="6 9 12 15 18 9"></polyline>
+                                            </svg>
+                                        </div>
+                                        <div class="form-group style2 col-12">
+                                            <textarea name="mensagem" id="mensagem" cols="30" rows="3" class="form-control" placeholder="Mensagem*" required></textarea>
+                                        </div>
+                                        <div class="form-btn col-12 mt-15">
+                                            <button type="submit" name="enviar" value="Enviar" id="enviar" class="th-btn w-100 style3">Solicitar Simula&ccedil;&atilde;o</button>
+                                        </div>
+                                    </div>
+                                    <p id="formStatus" class="form-messages mb-0 mt-3"></p>
+                                    <p class="form-privacy-note mt-2 mb-0" style="font-size: 13px; color: var(--body-color, #74787c); text-align: center;">
+                                        Seus dados ser&atilde;o utilizados exclusivamente para o contato comercial da Ello Mercantil&period;
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="contact-page-thumb1-1 gsap-parallax overflow-hidden">
+                            <img src="assets/img/normal/contact-page-thumb1-1.png" alt="Atendimento Ello Mercantil">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--==============================
+    Faq Area (Perguntas Frequentes)
+==============================-->
+    <section class="space overflow-hidden bg-smoke" data-bg-src="assets/img/bg/wave-bg6.png">
+        <div class="shape-mockup faq-bg-shape4-1 jump-reverse d-xl-block d-none" data-right="5%" data-top="8%">
+            <div class="color-masking">
+                <div class="masking-src bg-mask" style="mask-image: url(&quot;assets/img/shape/bg-shape2.png&quot;);"></div>
+                <img src="assets/img/shape/bg-shape2.png" alt="img">
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row gx-60 flex-row-reverse">
+                <div class="col-xxl-12 col-xl-12 col-lg-7">
+                    <div class="page-single mb-0">
+                        <span class="page-subtitle mb-4">Ainda est&aacute; com d&uacute;vida sobre o cons&oacute;rcio?</span>
+                        <h2 class="page-title mt-n2 mb-40">Perguntas frequentes</h2>
+                        <div class="accordion" id="faqAccordion">
+
+                            <div class="accordion-card style3 active">
+                                <div class="accordion-header" id="collapse-item-1">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">01. Como funciona o cons&oacute;rcio imobiliario?</button>
+                                </div>
+                                <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="collapse-item-1" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">Voc&ecirc; paga uma parcela por m&ecirc;s durante o prazo determinado&comma; em qualquer momento dentro desse per&iacute;odo&comma; pode ser contemplado com o valor do cr&eacute;dito para compra do seu im&oacute;vel&comma; terreno ou at&eacute; reformar. Al&eacute;m do sorteio&comma; voc&ecirc; pode usar recurso pr&oacute;prio para ofertar lance fixo ou lance livre&comma; e aumentar as suas chances de contempla&ccedil;&atilde;o.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card style3">
+                                <div class="accordion-header" id="collapse-item-2">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">02. O que &eacute; taxa de administra&ccedil;&atilde;o no cons&oacute;rcio?</button>
+                                </div>
+                                <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="collapse-item-2" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">&Eacute; um pequeno valor que voc&ecirc; paga na parcela para a institui&ccedil;&atilde;o administrar o grupo de cons&oacute;rcio. No financiamento voc&ecirc; paga juros incorporados ao valor financiado. J&aacute; a taxa de administra&ccedil;&atilde;o no Cons&oacute;rcio&comma; &eacute; fixa no contrato&comma; incide sobre o valor total do cr&eacute;dito e &eacute; dilu&iacute;da no prazo contratado. Se quiser saber mais detalhes&comma; fale com os nossos especialistas.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card style3">
+                                <div class="accordion-header" id="collapse-item-3">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">03. O que &eacute; lance?</button>
+                                </div>
+                                <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="collapse-item-3" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">&Eacute; uma oferta que voc&ecirc; pode fazer&comma; para antecipar a contempla&ccedil;&atilde;o e o uso da carta de cr&eacute;dito para a compra do seu im&oacute;vel. O lance ganhador &eacute; o de maior percentual em rela&ccedil;&atilde;o ao valor do cr&eacute;dito.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card style3">
+                                <div class="accordion-header" id="collapse-item-4">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">04. Posso utilizar me FGTS como lance?</button>
+                                </div>
+                                <div id="collapse-4" class="accordion-collapse collapse" aria-labelledby="collapse-item-4" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">Sim! Voc&ecirc; pode usar seu FGTS para dar um lance e antecipar a contempla&ccedil;&atilde;o da sua carta de cr&eacute;dito. Para utilizar esse recurso voc&ecirc; precisa estar de acordo com as regras do FGTS&comma; para saber mais detalhes&comma; fale com os nossos especialistas.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card style3">
+                                <div class="accordion-header" id="collapse-item-5">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">05. O que posso comprar com o cons&oacute;rcio imobili&aacute;rio?</button>
+                                </div>
+                                <div id="collapse-5" class="accordion-collapse collapse" aria-labelledby="collapse-item-5" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">O cons&oacute;rcio imobili&aacute;rio possibilita diversos tipos de aquisi&ccedil;&otilde;es&comma; para im&oacute;vel novo ou usado&comma; inclusive apartamento ou casa na planta. O valor do cr&eacute;dito tamb&eacute;m pode ser usado para construir um im&oacute;vel residencial ou comercial em um terreno pr&oacute;prio. Ou&comma; se preferir&comma; pode reformar ou ampliar seu im&oacute;vel&comma; residencial ou comercial. Pode comprar terreno&comma; ou quitar seu financiamento imobili&aacute;rio.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-card style3">
+                                <div class="accordion-header" id="collapse-item-6">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="false" aria-controls="collapse-6">06. Ap&oacute;s a contempla&ccedil;&atilde;o&comma; existe um tempo m&aacute;ximo para a utiliza&ccedil;&atilde;o do cr&eacute;dito?</button>
+                                </div>
+                                <div id="collapse-6" class="accordion-collapse collapse" aria-labelledby="collapse-item-6" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        <p class="faq-text">N&atilde;o&comma; o cr&eacute;dito fica aplicado at&eacute; o momento da sua utiliza&ccedil;&atilde;o.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==============================
+	Footer Area
+==============================-->
+    <footer class="footer-wrapper footer-layout1">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row align-items-center">
+                    <div class="col-12">
+                        <div class="title-area mb-0">
+                            <h2 class="sec-title text-white fadeinleft wow" data-wow-duration="1.2s" data-wow-delay="0.3s">
+							Entre em contato com nossos especialistas.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="widget-area">
+                    <div class="row justify-content-between">
+                        <div class="col-md-6 col-xl-auto">
+                            <div class="widget footer-widget">
+                                <div class="th-widget-about">
+                                    <div class="about-logo">
+                                        <a href="index.html"><img src="assets/img/logo-png3.png" alt="Ello Mercantil"></a>
+                                    </div>
+                                    <p class="about-text mb-4"> 
+									Somos uma empresa especializada em cons&oacute;rcios&comma; conectando voc&ecirc; &agrave;s 
+									melhores administradoras do mercado.
+									Na Ello Mercantil&comma; voc&ecirc; conta com uma estrutura completa&comma; suporte 
+									estrat&eacute;gico e somos um modelo de crescimento para quem busca evoluir e 
+									construir um neg&oacute;cio s&oacute;lido.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-xl-auto">
+                            <div class="widget widget_nav_menu footer-widget">
+                                <h3 class="widget_title">Acessos</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="empresa.html">A Ello</a></li>
+                                        <li><a href="consorcios.html">Cons&oacute;rcio</a></li>
+                                        <li><a href="contato.html">Contato</a></li>
+                                        <li><a href="simulador.html">Simule</a></li>
+										<li><a href="tel:08001551010">Ouvidoria</a></li>
+										<li><a href="contato.html">Seja Parceiro</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+						
+                        <div class="col-md-6 col-xl-auto"> 
+                            <div class="widget th-newsletter-widget style2 footer-widget">
+                                <h3 class="widget_title">Contatos</h3>
+								<p class="footer-text mb-4">08001551010 (Ouvidoria)</p>
+								<p class="footer-text mb-4">51 2314 1828</p>
+								<p class="footer-text mb-4">51 99719-1616</p>
+								<p class="footer-text mb-4">Av. Farrapos, 3392 - Porto Alegre/RS
+								- Cep: 90220-002</p>
+								<p class="footer-text mb-4">Hor&aacute;rio de atendimento: Segunda a Sexta 08:30 &aacute;s 17:30</p>
+                            </div>
+                        </div>
+						<div class="col-sm-6 col-xl-auto">
+                            <div class="widget widget_nav_menu footer-widget">
+                                <h3 class="widget_title">Siga</h3>
+                                <div class="menu-all-pages-container">
+                                    <ul class="menu footer-social-links">
+                                        <a href="https://www.facebook.com/profile.php?id=61563136366056" target="new" aria-label="Facebook"><svg class="site-icon social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" stroke="none" d="M13.5 22v-9h3l.5-3h-3.5V8.1c0-.9.3-1.6 1.6-1.6H17V4c-.6-.1-1.8-.2-3.1-.2-3.1 0-5.2 1.9-5.2 5.3v.9H6v3h2.7v9h4.8Z"></path></svg></a>
+                                        <a href="https://www.instagram.com/consorcioello/" target="new" aria-label="Instagram"><svg class="site-icon social-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1"></circle></svg></a>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="col-sm-12 col-xl-auto">
+                             <p class="about-text mb-4" align="center"> 
+									Todas as imagens exibidas nesse site s&atilde;o de car&aacute;ter meramente ilustrativo. Os cons&oacute;rcios comercializados pela Ello Mercantil S/A
+									s&atilde;o administrados
+									pela ICON Administradora de Cons&oacute;rcios Ltda&comma; administradora de cons&oacute;rcios devidamente Autorizada
+									n.&deg; 5999/2025 e regulamentada pelo Banco Central (BACEN).<br>
+									<img src="assets/img/ello-abac-bacen.png" alt="img" height="720" width="200"></p>
+                        </div>
+                    </div>
+                </div>
+						
+                <div class="copyright-wrap bg-black2">
+                    <div class="row gy-2">
+                        <div class="col-lg-6">
+                            <p class="copyright-text">2026 <a href="index.html">Ello Mercantil S/A.</a> Todos os direitos reservados.</p>
+                        </div>
+                        <div class="col-lg-6 text-center text-lg-end">
+                            <div class="footer-links">
+                                <ul>
+                                    <li><a>Design by ROQUE ADS</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top -->
+    <div class="scroll-top">
+        <span class="scroll-top-icon" aria-hidden="true"></span>
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+            <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
+        </svg>
+    </div>
+
+    <!--==============================
+    All Js File
+============================== -->
+    <!-- Jquery -->
+    <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+    <!-- Swiper Js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <!-- Counter Up -->
+    <script src="assets/js/jquery.counterup.min.js"></script>
+    <!-- Range Slider -->
+    <script src="assets/js/jquery-ui.min.js"></script>
+    <!-- Isotope Filter -->
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <!-- Wow Js -->
+    <script src="assets/js/wow.min.js"></script>
+
+    <!-- Gsap Animation -->
+    <script src="assets/js/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <!-- SplitText -->
+    <script src="assets/js/SplitText.min.js"></script>
+    <!-- Lenis Js -->
+    <script src="assets/js/lenis.min.js"></script>
+
+    <!-- Main Js File -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Form Handler (Formspree Integration) -->
+    <script src="assets/js/form-handler.js"></script>
+</body>
+
+</html>

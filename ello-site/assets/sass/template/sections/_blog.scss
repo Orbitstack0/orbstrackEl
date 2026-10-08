@@ -1,0 +1,456 @@
+/* Blog Card ---------------------------------- */
+.blog-title {
+    font-size: 30px;
+}
+.blog-card {
+    border-radius: 16px;
+    background-color: $white-color;
+    display: flex;
+    overflow: hidden;
+    border: 1px solid $light-color;
+    padding: 24px;
+    gap: 24px;
+    transition: 0.4s;
+    .blog-img {
+        overflow: hidden;
+        border-radius: 8px;
+        flex: 1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.4s ease-in-out;
+        }
+    }
+    .blog-content {
+        flex: 1;
+        align-self: center;
+    }
+    .blog-meta {
+        gap: 5px 0;
+        span, 
+        a {
+            font-weight: 400;
+            color: $body-color;
+            margin-right: 24px;
+            &:after {
+                display: none;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .box-title {
+        margin-top: 16px;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+    .box-text {
+        margin-top: 7px;
+        margin-bottom: 0;
+    }
+    .th-btn {
+        padding: 16px 30px;
+        min-width: auto;
+        margin-top: 32px;
+    }
+    &:hover {
+        border-bottom-color: $theme-color;
+        box-shadow: 0px 10px 20px rgba(202, 188, 186, 0.5);
+        .blog-img {
+            img {
+                transform: scale(1.05);
+                filter: none;
+            }
+            .icon-btn {
+                opacity: 1;
+            }
+            &:after {
+                opacity: 0.8;
+            }
+        }
+    }
+    @include xl {
+        .box-title {
+            font-size: 22px;
+        }
+    }
+    @include lg {
+        .box-title {
+            font-size: 24px;
+        }
+    }
+    @include md {
+        .box-title {
+            font-size: 20px;
+        }
+    }
+    @include sm {
+        display: block;
+        .blog-img {
+            margin-bottom: 24px;
+        }
+        .box-title {
+            font-size: 24px;
+        }
+    }
+    @include xs {
+        .box-title {
+            font-size: 20px;
+        }
+    }
+}
+
+/* Blog Card 2---------------------------------- */
+.blog-card2 {
+    .blog-img {
+        margin-bottom: 32px;
+        img {
+            width: 100%;
+        }
+    }
+    .blog-meta {
+        margin-bottom: 30px;
+        span, 
+        a {
+            color: $light-color;
+            font-weight: 400;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .box-title {
+        margin-bottom: 38px;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.42em;
+        a {
+            color: $white-color;
+            background-image: linear-gradient(to left, $theme-color, $theme-color);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 0 2px;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                color: $theme-color;
+                background-size: 100% 2px;
+            }
+        }
+        @include ml {
+            font-size: 24px;
+        }
+        @include xs {
+            font-size: 22px;
+        }
+    }
+}
+
+/* Blog Card 3---------------------------------- */
+.blog-slider3 {
+    .swiper-slide.swiper-slide-active {
+        .blog-card3 {
+            margin-top: 0;
+            .blog-content {
+                transform: scaleX(1);
+            }
+        }
+    }
+    .slider-pagination {
+        margin-top: -60px;
+        @include md {
+            margin-top: 30px;
+        }
+    }
+}
+.blog-card3 {
+    position: relative;
+    margin-top: 110px;
+    transition: 0.4s;
+    .blog-img {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .blog-content {
+        position: absolute;
+        left: 0;
+        bottom: 24px;
+        background: rgba($color: #13182B, $alpha: 0.8);
+        padding: 24px;
+        transition: 0.4s;
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    .blog-meta {
+        margin-bottom: 24px;
+        gap: 10px 24px;
+        span, 
+        a {
+            color: $light-color;
+            font-weight: 400;
+            margin-right: 0;
+            &:after {
+                display: none;
+            }
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .box-title {
+        margin-bottom: 38px;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.42em;
+        max-width: 402px;
+        a {
+            color: $white-color;
+            background-image: linear-gradient(to left, $theme-color, $theme-color);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 0 2px;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                color: $theme-color;
+                background-size: 100% 2px;
+            }
+        }
+        @include ml {
+            font-size: 24px;
+        }
+        @include xs {
+            font-size: 22px;
+        }
+    }
+    @include md {
+        margin-top: 0;
+        .box-title {
+            margin-bottom: 25px;
+        }
+    }
+    @include xs {
+        .blog-img {
+            img {
+                height: 450px;
+            }
+        }
+        .blog-content {
+            right: 24px;
+        }
+    }
+}
+
+/* Blog Card 4---------------------------------- */
+.blog-grid {
+    &-wrap {
+        display: grid;
+        gap: 24px;
+        grid-template-areas:
+        "one one one one one two two two two two two two"
+        "one one one one one three three three three three three three"
+        "one one one one one four four four four four four four";
+    }
+    display: flex;
+    background-color: transparent;
+    position: relative;
+    border-radius: 0px;
+    overflow: hidden;
+    gap: 32px;
+    .blog-img {
+        position: relative;
+        min-width: 280px;
+        height: 100%;
+        overflow: hidden;
+        margin: -1px;
+        border-radius: 8px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center center;
+            transition: 0.4s ease-in-out;
+        }
+    }
+    .blog-content {
+        padding: 0;
+        align-self: center;
+    }
+    .box-title {
+        font-size: 28px;
+        margin-bottom: 37px;
+        margin-top: 15px;
+        font-weight: 600;
+        a {
+            background-image: linear-gradient(to left, $title-color, $title-color);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 0 2px;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                color: $title-color;
+                background-size: 100% 2px;
+            }
+        }
+    }
+    .blog-meta {
+        span:after, a:after {
+            display: none;
+        }
+        span, a {
+            margin-right: 0;
+            padding-right: 24px;
+            color: $body-color;
+            &:last-child {
+                padding-right: 0;    
+            }
+            &:hover {
+                color: $title-color;
+            }
+        }
+    }
+    &:nth-child(1) {
+        grid-area: one;
+        margin-right: 32px;
+        display: block;
+        .blog-img {
+            min-width: 100%;
+            height: auto;
+            margin-bottom: 32px;
+        }
+    }
+    &:nth-child(2) {
+        grid-area: two;
+    }
+    &:nth-child(3) {
+        grid-area: three;
+    }
+    &:nth-child(4) {
+        grid-area: four;
+    }
+    &:hover {
+        .blog-img {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+@include xxl {
+    .blog-grid:nth-child(1) {
+        margin-right: 0;
+    }
+}
+@include lg {
+    .blog-grid {
+        &-wrap {
+            grid-template-areas:
+            "one one one"
+            "two two two"
+            "three three three"
+            "four four four";
+        }
+        &:nth-child(1) {
+            margin-bottom: 24px;
+        }
+        .blog-img {
+            min-width: 210px;
+        }
+    }
+}
+@include sm {
+    .blog-grid {
+        flex-direction: column;
+        &-wrap {
+            gap: 40px;
+        }
+        .blog-img {
+            height: 100%;
+        }
+        .blog-content {
+            align-self: flex-start;
+        }
+        .box-title {
+            margin-bottom: 27px;
+            font-size: 24px;
+        }
+        &:nth-child(1) {
+            margin-bottom: 0px;
+        }
+    }
+}
+@include xs {
+    .blog-grid {
+        .box-title {
+            font-size: 22px;
+        }
+    }
+}
+
+/* Blog Card 5---------------------------------- */
+.blog-card.style5 {
+    display: block;
+    border-radius: 0;
+    padding: 32px;
+    .blog-img {
+        border-radius: 0;
+        margin-bottom: 32px;
+    }
+    &:hover {
+        border: 1px solid $theme-color;
+    }
+    @include ml {
+        padding: 24px;
+    }
+}
+
+/* Blog Card 6---------------------------------- */
+.blog-card6 {
+    .blog-img {
+        margin-bottom: 30px;
+        img {
+            width: 100%;
+        }
+    }
+    .blog-meta {
+        margin-bottom: 24px;
+        span, 
+        a {
+            color: $body-color;
+            font-weight: 400;
+            &:hover {
+                color: $theme-color;
+            }
+        }
+    }
+    .box-title {
+        margin-bottom: 38px;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.42em;
+        a {
+            color: $title-color;
+            background-image: linear-gradient(to left, $theme-color, $theme-color);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-size: 0 2px;
+            transition: 0.5s ease-in-out;
+            &:hover {
+                color: $theme-color;
+                background-size: 100% 2px;
+            }
+        }
+        @include ml {
+            font-size: 24px;
+        }
+        @include xs {
+            font-size: 22px;
+        }
+    }
+}

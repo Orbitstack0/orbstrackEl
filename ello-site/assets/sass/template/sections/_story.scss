@@ -1,0 +1,76 @@
+/* Story Area 1 ---------------------------------- */
+.story-list-wrap {
+    .single-story-list {
+        display: flex;
+        gap: 68px;
+        &:not(:last-child) {
+            margin-bottom: 100px;
+        }
+        .story-date {
+            flex: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: $title-color;
+            margin-top: -0.3em;
+            position: relative;
+            padding-right: 64px;
+            align-self: start;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                width: 48px;
+                height: 2px;
+                background: $light-color;
+                right: 0;
+                top: 50%;
+                transform: translate(0, -50%);
+            }
+            &:before {
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: $theme-color;
+                z-index: 1;
+            }
+        }
+        .box-title {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+    }
+    @include xs {
+        .single-story-list {
+            display: block;
+            .story-date {
+                display: inline-block;
+                margin-bottom: 24px;
+            }
+            .box-title {
+                font-size: 24px;
+            }
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+/* Tab Menu 1 ------------------------------------*/
+.tab-menu1 {
+    gap: 10px;
+    justify-content: center;
+    .tab-btn {
+        font-size: 14px;
+        padding: 4px 12px;
+        background-color: $smoke-color2;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+        &.active {
+            background-color: $theme-color;
+            border-color: $theme-color;
+            color: $white-color;
+        }
+    }
+}

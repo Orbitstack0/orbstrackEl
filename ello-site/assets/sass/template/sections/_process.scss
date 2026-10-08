@@ -1,0 +1,295 @@
+/* Process Card ---------------------------------- */
+.process-thumb1-1 {
+    position: absolute;
+    right: 0;
+    top: 150px;
+    bottom: 0;
+    max-width: 747px;
+    img {
+        height: 100%;
+        object-fit: cover;
+        max-width: fit-content;
+    }
+    @include hd {
+        width: 42%;
+        max-width: none;
+        img {
+            max-width: none;
+            width: 100%;
+        }
+    }
+    @include xxl {
+        max-width: 537px;
+    }
+    @include ml {
+        max-width: 520px;
+    }
+    @include xl {
+        max-width: 460px;
+    }
+    @include lg {
+        display: none;
+    }
+}
+.process-card-wrap {
+    margin-top: -60px;
+    &:nth-child(2) {
+        .process-card {
+            margin-top: 150px;
+        }
+    }
+    &:nth-child(1) {
+        .process-card {
+            margin-top: 220px;
+        }
+    }
+    @include md {
+        margin-top: 24px;
+        &:nth-child(2) {
+            .process-card {
+                margin-top: 50px;
+            }
+        }  
+        &:nth-child(1) {
+            margin-top: 0;
+            .process-card {
+                margin-top: 50px;
+            }
+        }   
+    }
+}
+.process-card {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background: $black-color2;
+    padding: 0 20px 90px;
+    margin-top: 50px;
+    .box-number {
+        width: 100px;
+        height: 100px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        background: $theme-color;
+        color: $title-color;
+        font-size: 40px;
+        font-weight: 600;
+        font-family: $title-font;
+        border: 5px solid $title-color;
+        margin-bottom: -20px;
+        transform: translate(0, -50px);
+    }
+    .box-text {
+        font-size: 18px;
+        font-weight: 600;
+        font-family: $title-font;
+        color: $white-color;
+        margin-bottom: 25px;
+    }
+    .box-title {
+        margin-bottom: 0;
+        font-size: 40px;
+        font-weight: 600;
+        color: $white-color;
+        line-height: 0.8;
+    }    
+    @include xl {
+        padding-bottom: 60px;
+        .box-title {
+            font-size: 30px;
+        }
+    }
+    @include vxs {
+        .box-text {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .box-title {
+            font-size: 24px;
+        }
+    }
+}
+
+/* Process Card 2---------------------------------- */
+.process-card-thumb-wrap {
+    position: relative;
+    .grid_lines {
+        z-index: 1;
+        .grid_line {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+    }
+    .process-card-thumb {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: 0.4s;
+        img {
+            min-height: 300px;
+            object-fit: cover;
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(178.1deg, rgba(19, 24, 43, 0) -9.68%, rgba(19, 24, 43, 0.7) 55.45%);
+        }
+        &.active {
+            position: relative;
+            opacity: 1;
+        }
+    }
+}
+.process-wrap2 {
+    position: relative;
+    overflow: hidden;
+    .process-wrap-content {
+        z-index: 1;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        @include lg {
+            position: relative;
+            bottom: auto;
+            left: auto;
+            right: auto;
+            &:before,
+            &:after {
+                content: '';
+                position: absolute;
+                background: rgba($color: #ffffff, $alpha: 0.1);
+                z-index: 1;
+            }
+            &:after {
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 1px;
+                height: 100%;
+            }
+            &:before {
+                top: 50%;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 1px;
+                z-index: 2;
+            }
+        }
+        @include sm {
+            &:after,
+            &:before {
+                display: none;
+            }
+        }
+    }
+}
+.process-card-wrap2.item-active {
+    .process-card2 {
+        .box-content {
+            opacity: 0;
+        }
+        .active-box-content {
+            visibility: visible;
+            opacity: 1;
+            bottom: 0;
+            @include lg {
+                &:before {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+.process-card2 {
+    position: relative;
+    .box-number {
+        font-size: 40px;
+        font-weight: 600;
+        color: $white-color;
+        margin-bottom: 12px;
+        margin-top: -0.25em;
+    }
+    .box-title {
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: -0.4em;
+        color: $white-color;
+    }
+    .box-text {
+        color: $white-color;
+        margin-top: 24px;
+    }
+    .box-content {
+        opacity: 1;
+        padding: 48px 53px 48px 48px;
+        transition: 0.4s;
+    }
+    .active-box-content {
+        padding: 48px 53px 48px 48px;
+        position: absolute;
+        bottom: -50px;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1;
+        transition: 0.4s;
+        backdrop-filter: blur(10px);
+        &:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: $theme-color;
+            opacity: 0.5;
+            z-index: -1;
+            transition: 0.4s;
+        }
+    }
+    @include xxl {
+        .box-content,
+        .active-box-content {
+            padding: 35px;
+        }
+    }
+    @include ml {
+        .box-number {
+            font-size: 30px;
+        }
+        .box-title {
+            font-size: 20px;
+        }
+    }
+    @include lg {
+        background: $black-color2;
+        .box-content {
+            opacity: 0;
+            display: none;
+        }
+        .active-box-content {
+            position: relative;
+            bottom: auto;
+            opacity: 1;
+            visibility: visible;
+            &:before {
+                opacity: 0;
+            }
+        }
+    }
+    @include sm {
+        border-top: 1px solid rgba($color: #ffffff, $alpha: 0.1);
+    }
+    @include xs {
+        .box-content, 
+        .active-box-content {
+            padding: 30px 20px;
+        }
+        .box-number {
+            font-size: 24px;
+        }
+        .box-title {
+            font-size: 18px;
+        }
+    }
+}
